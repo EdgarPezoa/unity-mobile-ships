@@ -1,0 +1,54 @@
+{
+    "name": "Touch",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "a251e062-79b6-4ba0-8f06-671840044066",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "064ea95a-ab55-4118-b886-160dbdcfd254",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Fire",
+                    "type": "Button",
+                    "id": "7dbd612e-1fb5-4822-8f55-6b5120a43070",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "be919349-2842-4c9e-9e9e-0814f2d3850a",
+                    "path": "<Touchscreen>/primaryTouch/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7124b985-85bb-4c70-ae23-5f3dd4a6c645",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "Press(pressPoint=0.01)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

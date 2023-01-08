@@ -57,10 +57,10 @@ public class Fire : MonoBehaviour
         while (isFire)
         {
             Instantiate(
-                        Laser,
-                        transform.position,
-                        Quaternion.identity
-                    );
+                Laser,
+                transform.position,
+                Quaternion.identity
+            );
             yield return new WaitForSeconds(fireRate);
         }
         isShooting = false;

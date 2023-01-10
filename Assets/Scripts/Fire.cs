@@ -8,11 +8,13 @@ public class Fire : MonoBehaviour
     [SerializeField] GameObject Laser;
     PlayerInput playerInput;
     InputAction fireAction;
+    FireAudio fireAudio;
     bool isFire = false;
     bool isShooting = false;
 
     private void Awake()
     {
+        fireAudio = GetComponent<FireAudio>();
         playerInput = GetComponent<PlayerInput>();
         fireAction = playerInput.actions.FindAction("Fire");
         fireAction.performed += FireContext;
@@ -61,6 +63,7 @@ public class Fire : MonoBehaviour
                 transform.position,
                 Quaternion.identity
             );
+            fireAudio.PlayLazerAudio();
             yield return new WaitForSeconds(fireRate);
         }
         isShooting = false;

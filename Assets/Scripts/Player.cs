@@ -68,6 +68,7 @@ public class Player : MonoBehaviour
     //CUSTOM METHODS
     void MovePlayer()
     {
+        rawInput.y = rawInput.y;
         Vector3 newPos = Camera.main.ScreenToWorldPoint(rawInput);
         newPos.z = 0;
         transform.position = newPos;

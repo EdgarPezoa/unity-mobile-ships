@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8106825535753771501}
   - component: {fileID: 3445930750668071507}
-  - component: {fileID: 6018183540888354215}
   - component: {fileID: 3809149373731900064}
   - component: {fileID: 6861225139057997002}
+  - component: {fileID: 6018183540888354215}
+  - component: {fileID: -3138052444235110750}
   m_Layer: 0
   m_Name: EnemyLaser
   m_TagString: Untagged
@@ -87,22 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6018183540888354215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5225202406569139590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d793e87f7418cf448bcb8672a761aa37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserSpeed: 7
-  damage: 1
-  harm: Player
-  direcction: -1
 --- !u!50 &3809149373731900064
 Rigidbody2D:
   serializedVersion: 4
@@ -150,3 +135,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.09, y: 0.54}
   m_EdgeRadius: 0
+--- !u!114 &6018183540888354215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5225202406569139590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d793e87f7418cf448bcb8672a761aa37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserSpeed: 7
+  damage: 1
+  harm: Player
+  direcction: -1
+--- !u!114 &-3138052444235110750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5225202406569139590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c47829a71e25984b831cd8b801eddfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathAudio: {fileID: 8300000, guid: fafed6a996dce084f8e09dd301305466, type: 3}
+  deathVolume: 0.4

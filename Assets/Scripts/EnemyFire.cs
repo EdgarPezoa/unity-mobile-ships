@@ -8,6 +8,12 @@ public class EnemyFire : MonoBehaviour
     [SerializeField] float fireRate = 1f;
     [SerializeField] float minFireRateRND = .5f;
     [SerializeField] float maxFireRateRND = .5f;
+    FireAudio fireAudio;
+
+    private void Awake()
+    {
+        fireAudio = GetComponent<FireAudio>();
+    }
 
     private void Start()
     {
@@ -24,6 +30,7 @@ public class EnemyFire : MonoBehaviour
                 transform.position,
                 Quaternion.identity
             );
+            fireAudio.PlayLazerAudio();
             float tempTime = Random.Range(
             fireRate - minFireRateRND,
             fireRate + maxFireRateRND

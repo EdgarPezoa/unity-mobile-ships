@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 2803004865505751013}
   - component: {fileID: 2072913991}
   - component: {fileID: 8274735126059706901}
+  - component: {fileID: -2361821931348796920}
+  - component: {fileID: -6489474148929890486}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -149,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
+  hitEffect: {fileID: 379734027254531343, guid: f3af537005861584aa84301fbc6f452e, type: 3}
 --- !u!114 &2072913991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +166,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Laser: {fileID: 5225202406569139590, guid: 32c037bf63693bd46a96a3583dfb0e31, type: 3}
   fireRate: 1
+  minFireRateRND: 0.5
+  maxFireRateRND: 0.5
 --- !u!114 &8274735126059706901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,3 +180,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e819c37a803f64496d1169bd11f106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-2361821931348796920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2803004865505751014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fc5dfafedb33c940991fe666873f6e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lazerAudio: {fileID: 8300000, guid: f8b2311b951b53d42929551f53004703, type: 3}
+  lazerVolume: 1
+--- !u!114 &-6489474148929890486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2803004865505751014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c47829a71e25984b831cd8b801eddfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathAudio: {fileID: 8300000, guid: fafed6a996dce084f8e09dd301305466, type: 3}
+  deathVolume: 0.4

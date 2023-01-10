@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6018183540888354215}
   - component: {fileID: 3809149373731900064}
   - component: {fileID: 6861225139057997002}
+  - component: {fileID: 6712544405814598831}
   m_Layer: 0
   m_Name: PlayerLaser
   m_TagString: Untagged
@@ -100,6 +101,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserSpeed: 15
+  damage: 3
+  harm: Enemy
+  direcction: 1
 --- !u!50 &3809149373731900064
 Rigidbody2D:
   serializedVersion: 4
@@ -147,3 +151,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.09, y: 0.54}
   m_EdgeRadius: 0
+--- !u!114 &6712544405814598831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5225202406569139590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c47829a71e25984b831cd8b801eddfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathAudio: {fileID: 0}
+  deathVolume: 1

@@ -207,4 +207,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathAudio: {fileID: 8300000, guid: fafed6a996dce084f8e09dd301305466, type: 3}
-  deathVolume: 0.4
+  deathVolume: 1

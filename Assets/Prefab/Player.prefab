@@ -206,6 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   hitEffect: {fileID: 379734027254531343, guid: f3af537005861584aa84301fbc6f452e, type: 3}
+  isPlayer: 1
 --- !u!114 &2578431710082638202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,7 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lazerAudio: {fileID: 8300000, guid: f8b2311b951b53d42929551f53004703, type: 3}
-  lazerVolume: 1
+  lazerVolume: 0.1
 --- !u!114 &6943860251759759634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,4 +248,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathAudio: {fileID: 8300000, guid: fafed6a996dce084f8e09dd301305466, type: 3}
-  deathVolume: 0.4
+  deathVolume: 1

@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     Vector2 rawInput;
     Vector2 oldInput;
     Animator animator;
+    Health health;
     enum AnimationPosition
     {
         IDDLE = 0,
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour
     void Awake()
     {
         animator = GetComponent<Animator>();
+        health = GetComponent<Health>();
     }
 
     private void Start()
@@ -62,13 +64,16 @@ public class Player : MonoBehaviour
         {
             Animate((int)AnimationPosition.IDDLE);
         }
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            rawInput.y = rawInput.y + 32;
+        }
         oldInput = rawInput;
     }
 
     //CUSTOM METHODS
     void MovePlayer()
     {
-        rawInput.y = rawInput.y;
         Vector3 newPos = Camera.main.ScreenToWorldPoint(rawInput);
         newPos.z = 0;
         transform.position = newPos;
@@ -77,6 +82,17 @@ public class Player : MonoBehaviour
     void Animate(int xPos)
     {
         animator.SetFloat("xPos", xPos);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Enemy")
+        {
+            Enemy enemy = other.gameObject.GetComponent<Enemy>();
+            Health enemyHealth = other.gameObject.GetComponent<Health>();
+            health.DealDamage(enemy.GetBodyDamage());
+            enemyHealth.DestroyGameObject();
+        }
     }
 }
 

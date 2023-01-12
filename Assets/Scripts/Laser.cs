@@ -38,9 +38,14 @@ public class Laser : MonoBehaviour
         }
         if (other.tag == harm)
         {
-            Health enemyHealth = other.gameObject.GetComponent<Health>();
-            enemyHealth.DealDamage(damage);
+            Health health = other.gameObject.GetComponent<Health>();
+            health.DealDamage(damage);
             Destroy(gameObject);
         }
+    }
+
+    public int GetDamage()
+    {
+        return damage;
     }
 }

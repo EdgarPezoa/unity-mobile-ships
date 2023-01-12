@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2803004865505751012}
   - component: {fileID: 5651469724716225244}
   - component: {fileID: 3229425948777189422}
+  - component: {fileID: -5627601389986192006}
   - component: {fileID: 2803004865505751013}
   - component: {fileID: 2072913991}
   - component: {fileID: 8274735126059706901}
@@ -138,6 +139,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.93, y: 0.84}
   m_EdgeRadius: 0
+--- !u!114 &-5627601389986192006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2803004865505751014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f09b63a1ea5246a4f9e021bd08093ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodyDamage: 5
 --- !u!114 &2803004865505751013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,8 +164,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79c6e5cd7c7ac674fa3fb4719204f642, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
   hitEffect: {fileID: 379734027254531343, guid: f3af537005861584aa84301fbc6f452e, type: 3}
+  maxHealth: 5
+  isPlayer: 0
+  scorePoints: 50
+  deathScorePoints: 50
+  UI: {fileID: 0}
 --- !u!114 &2072913991
 MonoBehaviour:
   m_ObjectHideFlags: 0

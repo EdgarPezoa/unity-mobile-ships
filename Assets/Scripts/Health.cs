@@ -2,9 +2,13 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] int maxHealth = 10;
     [SerializeField] ParticleSystem hitEffect;
+    [SerializeField] int maxHealth = 10;
     [SerializeField] bool isPlayer = false;
+    [SerializeField] int scorePoints = 0;
+    [SerializeField] int deathScorePoints = 0;
+    [SerializeField] GameObject UI;
+    Score score;
     DeathAudio deathAudio;
     CameraShake cameraShake;
     int health;
@@ -13,6 +17,8 @@ public class Health : MonoBehaviour
     {
         deathAudio = GetComponent<DeathAudio>();
         cameraShake = Camera.main.GetComponent<CameraShake>();
+        UI = GameObject.Find("UI");
+        score = UI.GetComponent<Score>();
     }
 
     private void Start()
@@ -35,11 +41,11 @@ public class Health : MonoBehaviour
     {
         health -= damage;
         ShakeScreen();
+        AddScore(scorePoints);
         if (health <= 0)
         {
-            Destroy(gameObject);
-            PlayHitEffect();
-            deathAudio.PlayDeathAudio();
+            DestroyGameObject();
+
         }
     }
 
@@ -77,4 +83,19 @@ public class Health : MonoBehaviour
         }
     }
 
+    void AddScore(int scorePoint)
+    {
+        if (!isPlayer)
+        {
+            score.AddScore(scorePoint);
+        }
+    }
+
+    public void DestroyGameObject()
+    {
+        PlayHitEffect();
+        AddScore(deathScorePoints);
+        deathAudio.PlayDeathAudio();
+        Destroy(gameObject);
+    }
 }
